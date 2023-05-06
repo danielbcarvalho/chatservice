@@ -3,7 +3,7 @@ package gateway
 import (
 	"context"
 
-	"github.com/devfullcycle/fclx/chatservice/internal/domain/entity"
+	"github.com/danielbcarvalho/chatservice/internal/domain/entity"
 )
 
 type ChatGateway interface {

@@ -4,8 +4,8 @@ import (
 	"context"
 	"errors"
 
-	"github.com/devfullcycle/fclx/chatservice/internal/domain/entity"
-	"github.com/devfullcycle/fclx/chatservice/internal/domain/gateway"
+	"github.com/danielbcarvalho/chatservice/internal/domain/entity"
+	"github.com/danielbcarvalho/chatservice/internal/domain/gateway"
 	openai "github.com/sashabaranov/go-openai"
 )
 
