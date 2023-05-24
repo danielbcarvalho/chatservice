@@ -3,16 +3,18 @@ version: '3'
 services:
   chatservice:
     build: .
-    container_name: chatservice_app
+    container_name: chatservice_app1
     volumes:
       - .:/go/src
     ports:
       - "8081:8080"
       - "50052:50051"
+    networks:
+      - fcexperience
 
   mysql:
     image: mysql:8
-    container_name: mysql
+    container_name: mysql1
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
@@ -22,3 +24,9 @@ services:
       - 3306:3306  
     volumes:
       - .docker/mysql:/var/lib/mysql
+    networks:
+      - fcexperience
+
+networks:
+  fcexperience:
+    external: true
