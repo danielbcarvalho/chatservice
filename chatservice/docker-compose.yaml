@@ -5,7 +5,7 @@ services:
     build: .
     container_name: chatservice_app1
     volumes:
-      - .:/go/src
+      - .:/Users/superlogica/Development/full-cycle/chatservice
     ports:
       - "8081:8080"
       - "50052:50051"
@@ -29,4 +29,5 @@ services:
 
 networks:
   fcexperience:
-    external: true
+    external:
+      name: fcexperience
