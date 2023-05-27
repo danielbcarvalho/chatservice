@@ -6,13 +6,16 @@ services:
     ports:
       - 3000:3000
     volumes:
-      - .:/Users/superlogica/Development/full-cycle/next-app
-    extra_hosts:
-      - "host.docker.internal:172.17.0.1"  
+      - .:/Users/superlogica/Development/full-cycle/nextjs
+    # extra_hosts:
+    #   - "host.docker.internal:172.17.0.1"  
+    # extra_hosts:
+    #   - "host.docker.internal"
     networks:
       - fcexperience
 
   db:
+    platform: linux/x86_64
     image: mysql:8.0.30-debian
     environment:
       - MYSQL_ROOT_PASSWORD=root
@@ -35,7 +38,9 @@ services:
 
 networks:
   fcexperience:
-    external: true
+    external:
+      name: fcexperience
+
 
 # Mac e Linux
 # /etc/hosts

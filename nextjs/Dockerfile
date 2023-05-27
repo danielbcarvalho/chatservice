@@ -1,6 +1,6 @@
 FROM node:19-slim
 
-WORKDIR /Users/superlogica/Development/full-cycle/next-app
+WORKDIR /Users/superlogica/Development/full-cycle/nextjs
 
 USER node
 

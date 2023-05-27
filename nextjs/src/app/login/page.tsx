@@ -10,10 +10,11 @@ export default function LoginPage() {
 
   useEffect(() => {
     if (statusAuth === "authenticated") {
-      router.push("/");
+      router.push("/"); 
     }
     if (statusAuth === "unauthenticated") {
       signIn("keycloak");
+      // router.push("/");
     }
   }, [statusAuth, router]);
 
