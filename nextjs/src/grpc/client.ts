@@ -13,7 +13,7 @@ const proto = grpc.loadPackageDefinition(
 ) as unknown as ProtoGrpcType;
 
 export const chatClient = new proto.pb.ChatService(
-  "fcexperience:50052",
+  "host.docker.internal.:50052",
   grpc.credentials.createInsecure()
 );
 

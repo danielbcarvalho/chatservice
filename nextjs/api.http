@@ -15,7 +15,7 @@ GET http://localhost:3000/api/chats
 Authorization: Bearer {{token}}
 
 ###
-@chatId = 3b2669f8-dfad-4a48-b6ae-7382371c0bf1
+@chatId = e3dcc475-6de9-4146-9413-5c931a644bb3
 
 GET http://localhost:3000/api/chats/{{chatId}}/messages
 Authorization: Bearer {{token}}
@@ -30,8 +30,8 @@ Authorization: Bearer {{token}}
 }
 
 ###
-@messageId = 0e7e46c1-d814-491c-ad57-12820de82a61
-GET http://localhost:3000/api/messages/{{messageId}}/events
+@messageId = 79ca19fc-8165-45a3-806d-762d5eee308c
+GET http://host.docker.internal:3000/api/messages/{{messageId}}/events
 Authorization: Bearer {{token}}
 
 ###
