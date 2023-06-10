@@ -45,6 +45,10 @@ func GenerateGPTText(query string) (string, error) {
 		Model: "gpt-3.5-turbo",
 		Messages: []Message{
 			{
+				Role:    "system",
+				Content: "Hello, I'm a Cat Master's AI. What can I help you with today?",
+			},
+			{
 				Role:    "user",
 				Content: query,
 			},
